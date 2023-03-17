@@ -1,11 +1,11 @@
 import time
 
-from state import State
-from uistate import UiState
-from person import Person
-from db import Database as db
-from api import Api
-from ui import Ui
+from .state import State
+from .uistate import UiState
+from ..person import Person
+from ..db import Database as db
+from ..api import Api
+from ..ui import Ui
 
 class SearchState(State):
     def launch(self, ui_main) -> None:

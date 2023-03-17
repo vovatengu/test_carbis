@@ -1,4 +1,4 @@
-from interface import UiLogic
+from src.interface import UiLogic
 
 if __name__ == "__main__":
     a = UiLogic()

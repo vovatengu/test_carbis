@@ -1,6 +1,6 @@
-from state import State
-from uistate import UiState
-from ui import Ui
+from .state import State
+from .uistate import UiState
+from ..ui import Ui
 
 
 class BeginingState(State):

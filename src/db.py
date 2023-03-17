@@ -1,5 +1,5 @@
 import sqlite3
-from singleton import MetaSingleton
+from .singleton import MetaSingleton
 
 
 class Database(metaclass=MetaSingleton):

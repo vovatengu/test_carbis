@@ -1,5 +1,5 @@
-from state import State
-from uistate import UiState
+from .state import State
+from .uistate import UiState
 
 
 class ExitState(State):

@@ -1,7 +1,7 @@
-from state import State
-from uistate import UiState
-from db import Database as db
-from ui import Ui
+from .state import State
+from .uistate import UiState
+from ..db import Database as db
+from ..ui import Ui
 import time
 
 

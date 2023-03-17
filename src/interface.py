@@ -1,14 +1,14 @@
 from typing import Dict
 
 
-from state import State
-from uistate import UiState
-from beginingstate import BeginingState
-from inputstate import InputState
-from registrationstate import RegistrationState
-from searchstate import SearchState
-from exitstate import ExitState
-from endstate import EndState
+# from .state import State
+from .state.uistate import UiState
+from .state.beginingstate import BeginingState
+from .state.inputstate import InputState
+from .state.registrationstate import RegistrationState
+from .state.searchstate import SearchState
+from .state.exitstate import ExitState
+from .state.endstate import EndState
 
 
 class UiLogic:
