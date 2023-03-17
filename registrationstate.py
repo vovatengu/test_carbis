@@ -9,6 +9,7 @@ class RegistrationState(State):
     def launch(self, ui_main) -> None:
         connect = db()
         Ui.print_clean()
+        print('Регистрация')
         username = input("Введите имя пользователя: ")
         if connect.check_user(username):
             print(
