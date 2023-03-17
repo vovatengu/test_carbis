@@ -9,9 +9,16 @@ Python 3.+
 
 # Установка программы
 
-1. Клонируйте репозиторий
+0. Перейдите в папку, где хотите хранить программу
 ```
-https://github.com/vovatengu/test_carbis.git
+# Linux/Mac os
+cd ~
+# Windows PowerShell
+cd C:/
+```
+1. Клонируйте репозиторий 
+```
+git clone https://github.com/vovatengu/test_carbis.git
 ```
 2. Войдите в папку
 ```
@@ -19,17 +26,25 @@ cd test_carbis
 ```
 2. Создайте виртуальное окружение
 ```
+# Linux/Mac os
+python3 -m venv carbis
+source ./carbis/bin/activate
+
+# Windows PowerShell
 python -m venv carbis
-source carbis/bin/activate 
+.\carbis\Scripts\activate
 ```
 3. Установите зависимости
 ```
 pip install -r requirements.txt
 ```
-
 4. Запустите приложениe
 ```
-python .\app.py
+# Linux/Mac os
+python3 main.py
+
+# Windows PowerShell
+python main.py
 ```
 
 # Пример работы программы
@@ -37,7 +52,8 @@ python .\app.py
 
 ![screenshot](pic/1.png)
 
-При первом запуске программы нужно зарегистрироватьсяя.
+При первом запуске программы нужно зарегистрироваться.
+Чтобы получить API-ключ и секретный ключ, нужно зарегистрироваться на DaData.ru https://dadata.ru/profile/#info и скопировать из личного кабинета.
 
 ![screenshot](pic/2.png)
 
