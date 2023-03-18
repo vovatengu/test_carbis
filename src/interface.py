@@ -33,11 +33,16 @@ class UiLogic:
     def launch(self):
         if self.exit == None:
             self.__state.launch(self)
+            return True
         else:
             return False
 
     def get_state(self, state: UiState):
         return self.__states[state]
+    
+    def run(self):
+        while self.launch() == True:
+            continue
 
     def set_state(self, state: UiState):  # установка состояния
         self.__state = self.__states[state]
