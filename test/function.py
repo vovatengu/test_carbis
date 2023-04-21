@@ -8,8 +8,9 @@ def search():
     query = input("Введите адрес: ")
     try:
         dadata = Dadata(connect.get_token(), connect.get_secret())
-    except DadataError as e:
-        raise DadataError ('Ошибка') from e 
+    except UnicodeEncodeError:
+        print("Ошибка")
+        return
     
     result = dadata.suggest(name="address", query=query, languge=connect.get_language())
     if result:

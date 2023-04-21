@@ -52,7 +52,7 @@ class SelectorState(IState):
             print(f'{idx +1} {state.title}')
             # if idx == len(self.states) - 1:
             #     print(f'100 {state_machine.current_state.title}')
-        print()
+        print(f'0 Выход')
         try:
             user_input = int(input('>>'))
         except ValueError:
@@ -62,7 +62,7 @@ class SelectorState(IState):
         if user_input > 0 and user_input <= len (self.__states__):
             state_machine.current_state = (self.__states__[user_input - 1])
             state_machine.back_state = self
-        else:
+        elif user_input == 0:
             state_machine.current_state = state_machine.back_state
 
 class FunctionState(IState):
@@ -85,7 +85,6 @@ def test():
                 FunctionState('Токен',set_token),
                 FunctionState('Секрет',set_secret),
                 FunctionState('Язык',set_language),
-                # FunctionState('Выход',),
             ])
         ]
     )).run()
