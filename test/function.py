@@ -1,15 +1,20 @@
 from dadata import Dadata
 from db import Database 
+from exceptions import DadataError
 
 connect = Database()
 
 def search():
     query = input("Введите адрес: ")
-    dadata = Dadata(connect.get_token(), connect.get_secret())
+    try:
+        dadata = Dadata(connect.get_token(), connect.get_secret())
+    except DadataError as e:
+        raise DadataError ('Ошибка') from e 
+    
     result = dadata.suggest(name="address", query=query, languge=connect.get_language())
     if result:
-        for count, item in enumerate(result, start=1):
-            print(f'{count}) - {item["value"]}')
+        for count, item in enumerate(result,):
+            print(f'{count + 1 }) - {item["value"]}')
         choice = input("Выберите нужный адрес: ")
         finanal_result = dadata.clean(
             name="address", source=result[int(choice) - 1]["value"]
